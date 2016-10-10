@@ -3,7 +3,6 @@ package com.cs.nzhbj.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Window;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
@@ -25,7 +24,11 @@ public class SplashActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+      /*  //取消标题
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);*/
+        //取消状态栏
+    /*    getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);*/
         setContentView(R.layout.activity_splash);
 
         rl_root = (RelativeLayout) findViewById(R.id.rl_root);
